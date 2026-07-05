@@ -1,0 +1,38 @@
+## How to Run / Host These Projects
+
+Each folder in this repo is a standalone React component. Here are two ways to get them live — pick whichever suits you.
+
+### Option 1: CodeSandbox (fastest, no install needed)
+1. Go to [codesandbox.io](https://codesandbox.io) → **Create** → choose the **React** template
+2. Delete the default code in `App.js`
+3. Copy the `.jsx` file from the project folder you want and paste it in
+4. If the component imports `lucide-react`, click **Dependencies** in the sidebar → **Add Dependency** → search `lucide-react` → add it
+5. The live preview updates automatically — click **Share** to get a public link
+
+Repeat for each project folder you want to showcase.
+
+### Option 2: Run Locally with Vite
+1. Make sure [Node.js](https://nodejs.org) is installed
+2. In a terminal, run:
+   ```bash
+   npm create vite@latest my-app -- --template react
+   cd my-app
+   npm install lucide-react
+   ```
+3. Copy any `.jsx` file from this repo into `my-app/src/`
+4. Import and render it in `src/App.jsx`:
+   ```jsx
+   import GoldPriceTicker from "./GoldPriceTicker";
+   export default function App() {
+     return <GoldPriceTicker />;
+   }
+   ```
+5. Run `npm run dev` and open the local URL shown in the terminal
+
+### Option 3: Deploy Live with Vercel (one link for everything)
+1. Push this repo to your own GitHub account (Fork or clone it)
+2. Go to [vercel.com](https://vercel.com) → **New Project** → **Import Git Repository**
+3. Select the repo → click **Deploy**
+4. Vercel builds and hosts it automatically, giving you a live public URL
+
+No prior React experience needed — each component is self-contained and works independently of the others.
